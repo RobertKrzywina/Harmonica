@@ -1,6 +1,8 @@
 library constants;
 
 const String HARMONICA = 'Harmonijka';
+const String APP_VERSION = 'wersja beta';
+const String HOME = 'Strona główna';
 const String ABOUT_HARMONICA = 'O harmonijce';
 const String BACK = 'Powrót';
 const String MOUTH_HARMONICA = 'Harmonijka ustna';

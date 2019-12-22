@@ -22,13 +22,21 @@ class HomeScreen extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text(HARMONICA),
+          title: Text(HARMONICA + ' - ' + APP_VERSION),
         ),
         body: Container(
           padding: EdgeInsets.all(16.0),
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: <Widget>[
+              RichText(
+                text: TextSpan(
+                  style: DefaultTextStyle.of(context).style,
+                  children: [
+                    TextSpan(text: HOME + '\n', style: TextStyle(fontSize: 35)),
+                  ],
+                ),
+              ),
               RaisedButton(
                 child: Text(ABOUT_HARMONICA),
                 onPressed: () {
