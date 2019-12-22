@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:harmonijka/aboutHarmonica.dart';
+import 'package:harmonijka/songs.dart';
 import 'shared/constants.dart';
 
 void main() => runApp(MyApp());
@@ -23,15 +24,28 @@ class HomeScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(HARMONICA),
         ),
-        body: Center(
-          child: RaisedButton(
-            child: Text(ABOUT_HARMONICA),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => AboutHarmonica()));
-            },
+        body: Container(
+          padding: EdgeInsets.all(16.0),
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: <Widget>[
+              RaisedButton(
+                child: Text(ABOUT_HARMONICA),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AboutHarmonica()));
+                },
+              ),
+              RaisedButton(
+                child: Text(SONGS),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Songs()));
+                },
+              ),
+            ],
           ),
-        ),
+        )
       ),
     );
   }

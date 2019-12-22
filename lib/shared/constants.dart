@@ -10,3 +10,4 @@ const String RICHTER = 'strój Richtera, w tonacji';
 const String OCTAVES = 'Oznaczenia oktaw na diagramie:';
 const String SOURCE = 'Źródło: ';
 const String MOUTH_HARMONICA_LINK = 'https://pl.wikipedia.org/wiki/Harmonijka_ustna';
+const String SONGS = 'Piosenki';
