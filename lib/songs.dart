@@ -21,16 +21,32 @@ class Songs extends StatelessWidget {
               text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
                 children: [
-                  TextSpan(
-                      text: SONGS + '\n', style: TextStyle(fontSize: 35)),
+                  TextSpan(text: SONGS + '\n', style: TextStyle(fontSize: 35)),
                 ],
               ),
             ),
             RaisedButton(
-              child: Text('Song'),
+              child: Text(SASIEDZI),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Song()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Song(),
+                    settings: RouteSettings(arguments: SASIEDZI),
+                  ),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text(AUTOBIOGRAFIA),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Song(),
+                    settings: RouteSettings(arguments: AUTOBIOGRAFIA),
+                  ),
+                );
               },
             ),
           ],
