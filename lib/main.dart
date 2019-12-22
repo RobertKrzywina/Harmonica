@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:harmonijka/aboutHarmonica.dart';
+import 'shared/constants.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,17 +15,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Harmonica professor',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Harmonijka'),
+          title: Text(HARMONICA),
         ),
         body: Center(
           child: RaisedButton(
-            child: Text('O harmonijce'),
+            child: Text(ABOUT_HARMONICA),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => AboutHarmonica()));

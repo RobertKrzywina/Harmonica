@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'shared/constants.dart';
 
 class AboutHarmonica extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class AboutHarmonica extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Column(children: <Widget>[
-          Text('Powrót'),
+          Text(BACK),
         ]),
       ),
       body: Container(
@@ -22,7 +23,7 @@ class AboutHarmonica extends StatelessWidget {
                 style: DefaultTextStyle.of(context).style,
                 children: [
                   TextSpan(
-                      text: 'O harmonijce', style: TextStyle(fontSize: 35)),
+                      text: ABOUT_HARMONICA, style: TextStyle(fontSize: 35)),
                 ],
               ),
             ),
@@ -30,7 +31,7 @@ class AboutHarmonica extends StatelessWidget {
               textAlign: TextAlign.justify,
               text: TextSpan(children: [
                 TextSpan(
-                  text: '\nHarmonijka ustna',
+                  text: '\n' + MOUTH_HARMONICA,
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
@@ -39,12 +40,7 @@ class AboutHarmonica extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: ' - instrument muzyczny z grupy aerofonów. '
-                      'Dźwięk wydobywa się podczas ruchu powietrz'
-                      'a w szczelinach, przy których znajdują się'
-                      ' metalowe blaszki zwane stroikami (pot. ję'
-                      'zyczkami), które wprawione w drgania wydaj'
-                      'ą dźwięki zależne od ich długości.',
+                  text: HARMONICA_DEFINITION,
                   style: TextStyle(fontSize: 16, color: Colors.black),
                 ),
               ]),
@@ -52,7 +48,7 @@ class AboutHarmonica extends StatelessWidget {
             RichText(
               text: TextSpan(children: [
                 TextSpan(
-                  text: '\nRozkład dźwięków na harmonijce diatonicznej',
+                  text: '\n' + SOUND_DISTRIBUTION,
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
@@ -60,14 +56,14 @@ class AboutHarmonica extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: '\nstrój Richtera, w tonacji ',
+                  text: '\n' + RICHTER,
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
                   ),
                 ),
                 TextSpan(
-                  text: 'C',
+                  text: ' C',
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
@@ -78,7 +74,7 @@ class AboutHarmonica extends StatelessWidget {
             ),
             Image.asset('assets/images/soundDistribution.png'),
             Text(
-              '\nOznaczenia oktaw na diagramie:',
+              '\n' + OCTAVES,
               style: TextStyle(
                   fontSize: 16,
                   color: Colors.black,
@@ -88,14 +84,12 @@ class AboutHarmonica extends StatelessWidget {
             Image.asset('assets/images/harmonicas.png'),
             InkWell(
               child: Text(
-                "Źródło: https://pl.wikipedia.org/wiki/Harmonijka_ustna",
+                SOURCE + MOUTH_HARMONICA_LINK,
                 style: TextStyle(decoration: TextDecoration.underline),
               ),
               onTap: () async {
-                if (await canLaunch(
-                    "https://pl.wikipedia.org/wiki/Harmonijka_ustna")) {
-                  await launch(
-                      "https://pl.wikipedia.org/wiki/Harmonijka_ustna");
+                if (await canLaunch(MOUTH_HARMONICA_LINK)) {
+                  await launch(MOUTH_HARMONICA_LINK);
                 }
               },
             ),
