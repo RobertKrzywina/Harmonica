@@ -17,12 +17,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Harmonica professor',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'CourierPrime'),
       home: Scaffold(
         appBar: AppBar(
-          title: Text(HARMONICA + ' - ' + APP_VERSION),
+          title: Text(HARMONICA),
         ),
         body: Container(
           padding: EdgeInsets.all(16.0),
@@ -35,7 +33,10 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     TextSpan(
                       text: HOME + '\n',
-                      style: TextStyle(fontSize: 35),
+                      style: TextStyle(
+                        fontSize: 35,
+                        fontFamily: 'CourierPrime',
+                      ),
                     ),
                   ],
                 ),
@@ -44,7 +45,18 @@ class HomeScreen extends StatelessWidget {
                 child: ListView(
                   children: <Widget>[
                     RaisedButton(
-                      child: Text(ABOUT_HARMONICA),
+                      child: Text(
+                        ABOUT_HARMONICA,
+                        style: TextStyle(
+                          fontFamily: 'CourierPrime',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      color: Colors.blueAccent,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -53,7 +65,18 @@ class HomeScreen extends StatelessWidget {
                       },
                     ),
                     RaisedButton(
-                      child: Text(SONGS),
+                      child: Text(
+                        SONGS,
+                        style: TextStyle(
+                          fontFamily: 'CourierPrime',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      color: Colors.blueAccent,
+                      textColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => Songs()));

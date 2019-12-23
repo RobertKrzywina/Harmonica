@@ -9,7 +9,12 @@ class Songs extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Column(children: <Widget>[
-          Text(BACK),
+          Text(
+            BACK,
+            style: TextStyle(
+              fontFamily: 'CourierPrime',
+            ),
+          ),
         ]),
       ),
       body: Container(
@@ -23,7 +28,10 @@ class Songs extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: SONGS + '\n',
-                    style: TextStyle(fontSize: 35),
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'CourierPrime',
+                    ),
                   ),
                 ],
               ),
@@ -32,7 +40,18 @@ class Songs extends StatelessWidget {
               child: ListView(
                 children: <Widget>[
                   RaisedButton(
-                    child: Text(SASIEDZI),
+                    child: Text(
+                      SASIEDZI,
+                      style: TextStyle(
+                        fontFamily: 'CourierPrime',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    color: Colors.blueAccent,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -44,7 +63,18 @@ class Songs extends StatelessWidget {
                     },
                   ),
                   RaisedButton(
-                    child: Text(AUTOBIOGRAFIA),
+                    child: Text(
+                      AUTOBIOGRAFIA,
+                      style: TextStyle(
+                        fontFamily: 'CourierPrime',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    color: Colors.blueAccent,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
                     onPressed: () {
                       Navigator.push(
                         context,

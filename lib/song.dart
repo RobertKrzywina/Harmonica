@@ -12,7 +12,12 @@ class Song extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Column(children: <Widget>[
-          Text(BACK),
+          Text(
+            BACK,
+            style: TextStyle(
+              fontFamily: 'CourierPrime',
+            ),
+          ),
         ]),
       ),
       body: Container(
@@ -26,7 +31,10 @@ class Song extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: name + '\n',
-                    style: TextStyle(fontSize: 35),
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'CourierPrime',
+                    ),
                   ),
                 ],
               ),
@@ -36,7 +44,10 @@ class Song extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     tabs,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                 ],

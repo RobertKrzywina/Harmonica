@@ -10,7 +10,12 @@ class AboutHarmonica extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Column(children: <Widget>[
-          Text(BACK),
+          Text(
+            BACK,
+            style: TextStyle(
+              fontFamily: 'CourierPrime',
+            ),
+          ),
         ]),
       ),
       body: Container(
@@ -24,7 +29,10 @@ class AboutHarmonica extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: ABOUT_HARMONICA,
-                    style: TextStyle(fontSize: 35),
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'CourierPrime',
+                    ),
                   ),
                 ],
               ),
@@ -42,11 +50,16 @@ class AboutHarmonica extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                           decoration: TextDecoration.underline,
+                          fontFamily: 'CourierPrime',
                         ),
                       ),
                       TextSpan(
                         text: HARMONICA_DEFINITION,
-                        style: TextStyle(fontSize: 16, color: Colors.black),
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                          fontFamily: 'CourierPrime',
+                        ),
                       ),
                     ]),
                   ),
@@ -60,6 +73,7 @@ class AboutHarmonica extends StatelessWidget {
                             fontSize: 15,
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
+                            fontFamily: 'CourierPrime',
                           ),
                         ),
                         TextSpan(
@@ -67,6 +81,7 @@ class AboutHarmonica extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.black,
+                            fontFamily: 'CourierPrime',
                           ),
                         ),
                         TextSpan(
@@ -75,6 +90,7 @@ class AboutHarmonica extends StatelessWidget {
                             fontSize: 15,
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
+                            fontFamily: 'CourierPrime',
                           ),
                         ),
                       ],
@@ -84,9 +100,11 @@ class AboutHarmonica extends StatelessWidget {
                   Text(
                     '\n' + OCTAVES,
                     style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold),
+                      fontSize: 16,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'CourierPrime',
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   Image.asset('assets/images/octave.png'),
