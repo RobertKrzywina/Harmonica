@@ -24,13 +24,23 @@ class Song extends StatelessWidget {
               text: TextSpan(
                 style: DefaultTextStyle.of(context).style,
                 children: [
-                  TextSpan(text: name + '\n', style: TextStyle(fontSize: 35)),
+                  TextSpan(
+                    text: name + '\n',
+                    style: TextStyle(fontSize: 35),
+                  ),
                 ],
               ),
             ),
-            Text(
-              tabs,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  Text(
+                    tabs,
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             )
           ],
         ),

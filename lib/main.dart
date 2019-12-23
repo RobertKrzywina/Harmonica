@@ -33,27 +33,38 @@ class HomeScreen extends StatelessWidget {
                 text: TextSpan(
                   style: DefaultTextStyle.of(context).style,
                   children: [
-                    TextSpan(text: HOME + '\n', style: TextStyle(fontSize: 35)),
+                    TextSpan(
+                      text: HOME + '\n',
+                      style: TextStyle(fontSize: 35),
+                    ),
                   ],
                 ),
               ),
-              RaisedButton(
-                child: Text(ABOUT_HARMONICA),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => AboutHarmonica()));
-                },
-              ),
-              RaisedButton(
-                child: Text(SONGS),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Songs()));
-                },
-              ),
+              Expanded(
+                child: ListView(
+                  children: <Widget>[
+                    RaisedButton(
+                      child: Text(ABOUT_HARMONICA),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutHarmonica()));
+                      },
+                    ),
+                    RaisedButton(
+                      child: Text(SONGS),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Songs()));
+                      },
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
-        )
+        ),
       ),
     );
   }
