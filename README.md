@@ -6,10 +6,9 @@ This mobile application is dedicated for people who wants to start play on harmo
 I wanted to learn some basics of playing harmonica and create some app in this cool
 technology called flutter.
 
-Current version: <b>beta</b>
-
 Application can be found on <b>google play</b>.
+https://play.google.com/store/apps/details?id=pl.robert.harmonijka
  
-![ScreenShot](screens/home.png)
 ![ScreenShot](screens/aboutHarmonica.png)
-![ScreenShot](screens/song.png)
+![ScreenShot](screens/songs.png)
+![ScreenShot](screens/titanic.png)
