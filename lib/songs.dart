@@ -85,6 +85,52 @@ class Songs extends StatelessWidget {
                       );
                     },
                   ),
+                  RaisedButton(
+                    child: Text(
+                      PANIE_JANIE,
+                      style: TextStyle(
+                        fontFamily: 'CourierPrime',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    color: Colors.blueAccent,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Song(),
+                          settings: RouteSettings(arguments: PANIE_JANIE),
+                        ),
+                      );
+                    },
+                  ),
+                  RaisedButton(
+                    child: Text(
+                      TITANIC,
+                      style: TextStyle(
+                        fontFamily: 'CourierPrime',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    color: Colors.blueAccent,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Song(),
+                          settings: RouteSettings(arguments: TITANIC),
+                        ),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),
