@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:harmonijka/shared/backTextSection.dart';
+import 'package:harmonijka/shared/screenTitleSection.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import 'shared/constants.dart';
 
 class AboutHarmonica extends StatelessWidget {
@@ -9,34 +12,18 @@ class AboutHarmonica extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Column(children: <Widget>[
-          Text(
-            BACK,
-            style: TextStyle(
-              fontFamily: 'CourierPrime',
-            ),
-          ),
-        ]),
+        title: Column(
+          children: <Widget>[
+            BackTextSection(),
+          ],
+        ),
       ),
       body: Container(
         padding: EdgeInsets.all(16.0),
         width: MediaQuery.of(context).size.width,
         child: Column(
           children: <Widget>[
-            RichText(
-              text: TextSpan(
-                style: DefaultTextStyle.of(context).style,
-                children: [
-                  TextSpan(
-                    text: ABOUT_HARMONICA,
-                    style: TextStyle(
-                      fontSize: 35,
-                      fontFamily: 'CourierPrime',
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            ScreenTitleSection(ABOUT_HARMONICA),
             Expanded(
               child: ListView(
                 children: <Widget>[
