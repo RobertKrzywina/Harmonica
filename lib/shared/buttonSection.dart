@@ -4,9 +4,8 @@ import 'package:flutter/material.dart';
 class ButtonSection extends StatelessWidget {
   String _text;
   StatelessWidget _statelessWidget;
-  String textContent;
 
-  ButtonSection(this._text, this._statelessWidget, [this.textContent]);
+  ButtonSection(this._text, this._statelessWidget);
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +26,7 @@ class ButtonSection extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => _statelessWidget,
-            settings: RouteSettings(arguments: textContent),
-          ),
+          MaterialPageRoute(builder: (context) => _statelessWidget),
         );
       },
     );

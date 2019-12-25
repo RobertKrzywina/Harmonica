@@ -23,6 +23,15 @@ const String AUTOBIOGRAFIA = 'Autobiografia';
 const String PANIE_JANIE = 'Panie Janie';
 const String TITANIC = 'Titanic';
 
+////////////////////////////////////////////////////////////////////////////////
+
+const String SASIEDZI_IMG = 'assets/images/songs/sasiedzi.png';
+const String PERFECT_IMG = 'assets/images/songs/perfect.png';
+const String PANIE_JANIE_IMG = 'assets/images/songs/panieJanie.png';
+const String TITANIC_IMG = 'assets/images/songs/titanic.png';
+
+////////////////////////////////////////////////////////////////////////////////
+
 const String SASIEDZI_CONTENT = '6 6 7\n\n'
     '6 6 5\n\n'
     '6 6 6 6 6 6 6 6 6 (6) 5';
